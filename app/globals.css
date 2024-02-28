@@ -17,6 +17,7 @@
 }
 
 body {
+  font-family: 'Poppins', sans-serif !important;
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
@@ -31,3 +32,107 @@ body {
     text-wrap: balance;
   }
 }
+
+.socHov:hover {
+  transition: 0.3s all;
+}
+.socHov:hover > i {
+  transition: 0.3s all;
+}
+.socHov:hover > span {
+  width: 200px;
+  transition: 0.8s all;
+}
+.vl {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+
+.ham {
+  width: 64px;
+  height: 64px;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: transform 400ms;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.hamRotate.active {
+  transform: rotate(45deg);
+}
+.hamRotate180.active {
+  transform: rotate(180deg);
+}
+.line {
+  fill: none;
+  transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+  stroke: #ffffff;
+  stroke-width: 5.5;
+  stroke-linecap: round;
+}
+
+.ham3 .top {
+  stroke-dasharray: 40 130;
+}
+.ham3 .middle {
+  stroke-dasharray: 40 140;
+}
+.ham3 .bottom {
+  stroke-dasharray: 40 205;
+}
+.ham3.active .top {
+  stroke-dasharray: 75 130;
+  stroke-dashoffset: -63px;
+}
+.ham3.active .middle {
+  stroke-dashoffset: -102px;
+}
+.ham3.active .bottom {
+  stroke-dasharray: 110 205;
+  stroke-dashoffset: -86px;
+}
+.noiseBG {
+  z-index: 20;
+  pointer-events: none;
+  position: fixed;
+  overflow: hidden;
+  top: -50%;
+  left: -50%;
+  right: -50%;
+  bottom: -50%;
+  width: 200%;
+  height: 200vh;
+  background: transparent url(http://assets.iceable.com/img/noise-transparent.png) repeat 0 0;
+  animation: bg-animation 0.3s infinite;
+  opacity: 0.7;
+  visibility: visible;
+  z-index: 2000;
+}
+@keyframes bg-animation {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(-10%, 5%);
+  }
+  100% {
+    transform: translate(5%, 0);
+  }
+}
+
+
+
+.item {
+  width: 56%;
+  overflow: visible;
+  stroke: #fff;
+  stroke-width: 2;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+}
+
