@@ -19,12 +19,7 @@
 body {
   font-family: 'Poppins', sans-serif !important;
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: #151518;
 }
 
 @layer utilities {
@@ -109,7 +104,7 @@ body {
   height: 200vh;
   background: transparent url(http://assets.iceable.com/img/noise-transparent.png) repeat 0 0;
   animation: bg-animation 0.3s infinite;
-  opacity: 0.7;
+  opacity: 0.8;
   visibility: visible;
   z-index: 2000;
 }
@@ -125,14 +120,21 @@ body {
   }
 }
 
-
-
 .item {
   width: 56%;
   overflow: visible;
-  stroke: #fff;
+  fill: #fff;
   stroke-width: 2;
   stroke-linejoin: round;
   stroke-linecap: round;
+}
+.outlinex {
+  font-weight: 900;
+  font-size: 50px;
+  text-transform: uppercase;
+  color: #fff;
+  -webkit-text-stroke-color: #FFF;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 1px;
 }
 
