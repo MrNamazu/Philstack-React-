@@ -138,3 +138,10 @@ body {
   -webkit-text-stroke-width: 1px;
 }
 
+.projectButton {
+  background-image: url("../public/projects-btn-normal.png");
+}
+.projectGroup:hover > .projectButton {
+  background-image: url("../public/projects-btn-active.png");
+
+}
